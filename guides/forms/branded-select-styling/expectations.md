@@ -1,0 +1,10 @@
+- 实现必须为 `<select>` 元素应用 `appearance: base-select`，以启用可自定义的 select 行为。
+- 实现必须为 `::picker(select)` 伪元素应用 `appearance: base-select`，以启用选项下拉菜单的自定义样式。
+- 实现必须使用 `::picker(select)` 伪元素定义选项列表的视觉容器（如边框、阴影、背景）。
+- 实现必须使用 `select::picker-icon` 自定义下拉箭头图标。
+- 实现必须使用 `option::checkmark` 自定义选中选项的勾选标记。
+- 若使用自定义触发按钮，标记中需在 `<select>` 内包含 `<button>` 元素以替换默认触发按钮。
+- 若使用自定义触发按钮，必须包含 `<selectedcontent>` 元素以显示当前选项，且 `<select>` 不得包含用于镜像选中项的旧式 `<selectedoption>` 元素。
+- 颜色与背景色的对比度必须至少为 `3:1`。
+- 实现不得将 JavaScript 作为切换下拉菜单或为选择器设置样式的主要机制。
+- `<select>` 必须具有 `name` 属性和关联的 `<label>`。这确保即使使用自定义 UI，组件仍可被屏幕阅读器访问，并能与标准表单提交正确配合。

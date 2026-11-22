@@ -1,0 +1,1 @@
+- 在 Daily Grind 首页添加自定义样式的冲泡浓度范围滑块，按命名浓度（Mild、Medium、Bold、Extra Bold）分档，并带自定义轨道、滑块手柄和填充进度。

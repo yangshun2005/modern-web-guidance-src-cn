@@ -1,0 +1,8 @@
+- 实现必须在调用任何命令式 WebMCP 注册方法前，先对 `document.modelContext` 做特性检测。
+- 实现必须使用 `document.modelContext.registerTool()` 注册动态客户端工具，并提供 `name`、`description` 和 `execute` 属性。
+- 如果工具接受输入参数，实现必须用 `inputSchema` JSON Schema 对象定义这些参数，且每个参数都要有显式的 `type` 和描述性的 `description`。
+- 对于只读取或查询状态、不修改应用数据的工具，实现必须包含 `annotations: { readOnlyHint: true }`。
+- 实现必须向 `document.modelContext.registerTool()` 传入 `AbortSignal`（来自 `AbortController`），以支持工具清理和生命周期管理。
+- 实现不得直接调用 `unregisterTool()`，必须通过 `AbortController.abort()` 移除工具。
+- 实现必须确保工具的 `execute` 函数仅在相应的 UI 状态更新完成后才 resolve。
+- 将 HTML `<form>` 作为声明式 WebMCP 工具暴露时，实现必须为该 `<form>` 同时标注 `toolname` 和 `tooldescription` 属性。
