@@ -1,0 +1,1 @@
+- 更新 `index.html` 中的 Seasonal Favorites 区域，为 Maple Oat Latte、Dark Roast Espresso 和 Cold Brew 卡片加入交互式咖啡点单功能，并将这些客户端点单操作暴露为浏览器 AI 代理可发现和调用的工具。

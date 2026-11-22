@@ -1,0 +1,70 @@
+- 实现必须使用 `<form>` 元素包裹用于数据收集的交互控件。
+- 实现必须在 `<form>` 元素上指定 `action` 属性，指向目标 URL。
+- 实现必须为每个表单控件（input、select、textarea）指定 `name` 属性。
+- 实现必须使用语义化标签，如 `<button type="submit">`、`<textarea>` 和 `<select>`。
+- 实现必须使用 `<fieldset>` 和 `<legend>` 对相关控件进行分组。
+- 实现必须在提交按钮上使用可操作的语言（例如“保存更改”）。
+- 实现必须对敏感数据和变更操作使用 `method="POST"`。
+- 实现必须对幂等请求（例如搜索）使用 `method="GET"`。
+- 实现不得使用通用 `<div>` 或 `<span>` 作为表单控件。
+- 实现不得将 `type="button"` 用于主要提交按钮。
+- 实现不得在未提供替代布局方案的情况下禁用 textarea 调整大小。
+- 当有 2-5 个互斥选项时，实现必须使用 `<input type="radio">`。
+- 当有 6 个或更多互斥选项时，实现必须使用 `<select>`。
+- 对于大量或动态的选项集（10+），实现必须使用 `<input list="id">`（`<datalist>`）。
+- 实现必须对多选选项使用 `<input type="checkbox">`。
+- 实现必须使用 `for` 和 `id` 将每个 `<label>` 与其输入控件关联。
+- 实现必须将标签视觉上置于表单控件上方，除非使用有效的可访问包裹模式。
+- 实现必须使用可见标签，不得仅依赖 `placeholder`。
+- 实现必须确保标签与其输入控件之间的垂直间距小于表单组之间的间距。
+- 实现必须使用 `aria-describedby` 将输入控件与帮助文本或错误消息关联。
+- 实现必须在 `<html>` 元素上定义 `lang` 属性。
+- 实现必须使用非颜色的视觉线索（图标、文本）来传达状态。
+- 实现必须清楚标明哪些字段为必填。
+- 实现必须使用 `aria-live` 进行动态错误播报。
+- 实现不得使用 `placeholder` 替代标签。
+- 实现不得在未提供高对比度替代方案的情况下禁用焦点轮廓。
+- 实现必须使用 `autocomplete` 属性指定预期数据（例如 `email`、`tel`）。
+- 实现必须使用 `inputmode` 优化屏幕键盘（例如 PIN 码使用 `inputmode="numeric"`）。
+- 实现必须使用 `enterkeyhint` 设置 Enter 键标签。
+- 实现必须在标识符字段（如用户名、邮箱、URL、代码和搜索输入）上设置 `autocorrect="off"`（以及 `autocapitalize="none"`、`spellcheck="false"`）。
+- 实现必须对复杂数字（信用卡、电话号码）使用单字段输入。
+- 实现不得对信用卡或邮政编码使用 `type="number"`。
+- 实现必须使用原生约束：`required`、`minlength`、`maxlength`、`pattern`。
+- 实现必须使用 CSS 伪类（如 `:user-invalid`）进行非侵入式样式处理。
+- 实现必须使用 ValidityState API（`setCustomValidity`）实现自定义消息。
+- 实现不得通过禁用提交按钮来阻止验证。
+- 实现必须在有效提交被点击*之后*禁用按钮。
+- 实现不得在 `input` 事件活跃输入期间显示验证错误（清除错误除外）。
+- 实现必须在 `blur` 或 `focusout` 时运行检查并显示错误。
+- 实现必须在 `submit` 时阻止无效载荷，并将焦点路由到错误摘要或第一个错误字段。
+- 实现必须使用单列布局以便扫视。
+- 实现必须将输入控件的 `font-size` 设置为至少 `1rem`（16px）。
+- 实现必须确保点击目标至少为 48px。
+- 实现必须使用相对于根元素的单位（`rem`）设置排版和间距。
+- 实现应使用 CSS 逻辑属性（例如 `margin-inline-start`）。
+- 实现必须使用 `appearance: none` 自定义下拉箭头，且不破坏语义。
+- 实现必须确保输入控件清晰可见，边框对比度充足。
+- 实现必须使用 `.visually-hidden` 方案（`clip-path: inset(50%)` 配合 1px 尺寸，而非 `display: none`）在视觉上隐藏输入控件，以保持其可访问性。
+- 实现必须在 AJAX 表单提交时阻止默认导航（`e.preventDefault()`）。
+- 实现必须对动态 UI 展开使用 `aria-expanded` 和 `aria-controls`。
+- 实现不得在 JavaScript 失败时阻止页面提交（确保服务端回退）。
+- 实现必须在注册时使用 `autocomplete="new-password"`，在登录时使用 `autocomplete="current-password"`。
+- 实现必须允许粘贴到密码字段。
+- 实现必须提供切换功能，允许用户取消密码输入的掩码。
+- 密码切换按钮不得使用 `aria-label` 覆盖其可见文本，必须通过 `aria-pressed` 暴露切换状态，并必须通过 `aria-describedby` 关联警告描述。
+- 实现必须在支付按钮上标明确切金额。
+- 实现必须对支付字段使用 `autocomplete="cc-number"`、`cc-exp`、`cc-csc`。
+- 实现必须为变更操作包含加密安全的反 CSRF 令牌。
+- 实现不得在表单标记中直接使用内联 JavaScript（例如 `onclick="..."`）。
+- 实现必须对姓名使用单个字段（不拆分）。
+- 实现必须对地址使用 `autocomplete="street-address"`。
+- 实现如需支持多国格式，必须对地址使用 `<textarea>` 元素。
+- 实现必须使邮政编码在国际地址表单中为可选。
+- 实现不得将姓名输入拆分为“名”和“姓”等固定变量。
+- 实现不得对姓名和用户名强制仅限拉丁字符。
+- 实现必须支持键盘导航（使用 `Tab` 和 `Shift+Tab`）并具有可见焦点。
+- 实现不得在分析的标准事件标签中追踪敏感个人数据。
+- 实现必须在多页表单中清楚显示进度。
+- 实现必须允许用户在多页表单的页面之间前后导航。
+- 实现必须在多页表单中使用上下文相关的 `enterkeyhint` 值（例如 `"previous"`、`"next"`）。

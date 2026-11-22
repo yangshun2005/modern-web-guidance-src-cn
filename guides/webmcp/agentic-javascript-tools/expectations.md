@@ -1,0 +1,7 @@
+- 注册工具前，代码会先检查 `document` 中是否存在 `modelContext`。
+- 调用 `document.modelContext.registerTool` 时传入工具定义对象。
+- 工具定义包含 `name`、`description`、`inputSchema` 和 `execute`。
+- 工具名称由 1 到 128 个 ASCII 字母、数字、下划线（`_`）、连字符（`-`）或句点（`.`）组成。
+- `inputSchema` 是有效的 JSON Schema 对象，且包含属性描述。
+- 创建 `AbortController`，并将其 signal 传给 `registerTool`。
+- 若 `execute` 函数执行任何异步操作，则该函数为异步函数。

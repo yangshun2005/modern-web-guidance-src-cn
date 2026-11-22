@@ -1,0 +1,7 @@
+- 表单元素同时具有 `toolname` 和 `tooldescription` 属性。
+- 输入元素具有关联的标签或 `toolparamdescription` 属性。
+- `submit` 事件监听器使用 `event.preventDefault()`。
+- `submit` 事件监听器检查 `event.agentInvoked`。
+- `submit` 事件监听器使用 Promise 调用 `event.respondWith()`。
+- 使用 `:tool-form-active` 伪类提供视觉反馈。
+- 对于没有 `toolautosubmit` 的表单，使用 `:tool-submit-active` 伪类提供视觉反馈。
